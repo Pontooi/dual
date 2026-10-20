@@ -1,0 +1,194 @@
+================================================================================
+          DUALDEV ACADEMY - GUIA E BLUEPRINT PARA WIREFRAME NO FIGMA
+================================================================================
+
+Este documento serve como manual e guia técnico para a criação dos Wireframes 
+(baixa e alta fidelidade) e do Design System da plataforma DualDev no FIGMA.
+
+--------------------------------------------------------------------------------
+1. CONFIGURAÇÃO DE FRAMES NO FIGMA
+--------------------------------------------------------------------------------
+Crie uma página no Figma chamada "DualDev - UI & Wireframes" com estes frames:
+
+• Desktop Padrão: 1440 x 1024 px
+  Grid: 12 Colunas | Margem: 80px | Gutter (espaçamento entre colunas): 24px
+
+• Desktop Compacto (Laptop): 1280 x 800 px
+  Grid: 12 Colunas | Margem: 48px | Gutter: 16px
+
+• Mobile (Celular Android / iPhone 14/15): 393 x 852 px
+  Grid: 4 Colunas | Margem: 16px | Gutter: 12px
+
+--------------------------------------------------------------------------------
+2. DESIGN TOKENS - CORES (PALETA DARK PASTEL)
+--------------------------------------------------------------------------------
+Cadastre estas cores no painel de Color Styles do Figma:
+
+• Fundo Principal do App:   #0B101B (Ardósia Profundo)
+• Fundo dos Cards/Paineis:  #0F172A (Superfície Primária)
+• Topbar e Cabeçalhos:      #0E1626 (Superfície Secundária)
+• Área de Código do Editor: #09101A (Editor Escuro)
+• Linhas do Editor (Gutter):#070C14 (Calha Numérica)
+• Pêssego Pastel (Primário):#FFBE82 (Botão Executar, CTAs, Badges de XP)
+• Celeste Pastel:           #9FD6F2 (Bordas finas, títulos, saídas do terminal)
+• Cerúleo Pastel:           #6FB7DB (Linguagem ativa, destaques e links)
+• Menta Pastel (Sucesso):   #86EFAC (Botão Verificar, testes aprovados)
+• Rosa Pastel (Erro):       #FCA5A5 (Erros de sintaxe e falhas de teste)
+• Divisores e Bordas:       #1E293B (Linhas estruturais sutis)
+• Texto de Alto Contraste:  #FFFFFF (Títulos principais)
+• Texto de Leitura:         #CBD5E1 (Parágrafos e teoria)
+• Texto Mudo/Secundário:    #64748B (Legendas, contadores, timestamps)
+
+--------------------------------------------------------------------------------
+3. DESIGN TOKENS - TIPOGRAFIA
+--------------------------------------------------------------------------------
+Famílias do Google Fonts:
+
+1. Fonte da Interface: Inter
+   - Hero: 36px / Extrabold / Altura de linha: 44px
+   - H1: 24px / Bold / Altura de linha: 32px
+   - H2: 18px / Bold / Altura de linha: 26px
+   - H3: 14px / SemiBold / Altura de linha: 20px
+   - Corpo (Body): 13px / Regular / Altura de linha: 20px
+   - Legendas (Caption): 11px / Medium / Altura de linha: 14px
+
+2. Fonte de Código e Terminal: JetBrains Mono
+   - Código no Editor: 13px / Regular / Altura de linha: 24px
+   - Números da Linha: 12px / Regular / Altura de linha: 24px
+   - Saída do Terminal: 12px / Medium / Altura de linha: 18px
+   - Chips de XP: 11px / Bold / Altura de linha: 14px
+
+--------------------------------------------------------------------------------
+4. BIBLIOTECA DE COMPONENTES ATÔMICOS (FIGMA COMPONENTS)
+--------------------------------------------------------------------------------
+
+[BOTÕES]
+• Botão Primário (Executar):
+  - Altura 36px, Auto-layout horizontal, Padding 12px 16px, Radius 8px.
+  - Fill: #FFBE82 | Texto: #0B101B (Inter 13px Bold) | Ícone: Play (Preto).
+
+• Botão Sucesso (Verificar Desafio):
+  - Altura 36px, Fill: #86EFAC | Texto: #0B101B | Ícone: CheckCircle2.
+
+• Botão Secundário (Glass):
+  - Altura 36px, Fill: #141F30 | Borda: 1px #9FD6F2 (25% opacidade) | Texto: #FFF.
+
+• Chip de XP (Navbar):
+  - Fill: #131D2E | Borda: 1px #FFBE82 (30% opacidade) | Raio: 6px.
+  - Conteúdo: Ícone Raio (#FFBE82) + "120 XP | Nv. 1".
+
+• Card Padrão (aero-card):
+  - Fill: #0F172A | Borda: 1px #1E293B | Raio: 12px.
+  - Sombra: Blur 12px, Y 4px, Cor: rgba(0, 0, 0, 0.35).
+
+--------------------------------------------------------------------------------
+5. BLUEPRINT E ESTRUTURAÇÃO DAS TELAS
+--------------------------------------------------------------------------------
+
+================================================================================
+TELA 1: INÍCIO (HOME / CATÁLOGO)
+================================================================================
+• Topbar fixa de 56px:
+  [Logo DualDev com gradiente pêssego/celeste] [Links de navegação] [XP e Nível]
+• Banner Hero (Fundo #0F172A, Raio 16px):
+  - Badge superior: "✦ Trilha Java Ativa"
+  - Título Display: "Domine Java e programação orientada a objetos na prática"
+  - Descrição: "Escreva código no navegador com feedback e testes em tempo real"
+  - 3 Botões de Ação: [▶ Acessar Academia] [</> Playground] [🏆 Conquistas]
+• Seção Destaques:
+  - 3 Cards com os primeiros exercícios práticos da trilha ativa (+XP e status).
+• Seção Catálogo:
+  - Grid de 5 cards com todas as linguagens (Java, Python, JS, HTML5, CSS3).
+
+================================================================================
+TELA 2: ACADEMIA (SALA DE AULA INTERATIVA - 3 PAINÉIS)
+================================================================================
+• Sub-barra de controle:
+  - Seletores de linguagem com porcentagem de progresso (% concluído).
+  - Botão de alternar visualização: [☰ Exercícios / Recolher].
+• Divisão dos 3 Painéis (Workspace):
+  - PAINEL ESQUERDO (40% de largura): TEORIA & GUIA
+    * Cabeçalho: Categoria da aula, dificuldade, XP e tempo estimado.
+    * Título da aula e selo de concluído.
+    * Teoria com títulos destacados, parágrafos e caixas com código estático.
+    * Card com o "Objetivo do Desafio" (borda azul celeste).
+    * Acordeão expansível: "Precisa de ajuda? (Dicas e solução sugerida)".
+    * Rodapé com botões de navegação: [← Anterior] [Próxima Lição →].
+  - PAINEL SUPERIOR DIREITO (60% de largura, altura flexível): EDITOR DE CÓDIGO
+    * Barra superior: Nome do arquivo (Main.java), botão Snippets, Copiar, Restaurar,
+      botão Verificar (Menta) e botão Executar (Pêssego).
+    * Editor: Coluna esquerda com números das linhas (#070C14) e área de texto (#09101A).
+    * Janela flutuante de autocompletar (IntelliSense) estilo VS Code.
+  - PAINEL INFERIOR DIREITO (60% de largura, altura fixa 240px): TERMINAL & TESTES
+    * Abas: [Terminal] e [Testes (X/Y passados)].
+    * Área de saída do console (#070D16) com stdout em azul celeste e erros em rosa pastel.
+    * Botão de lixeira (Limpar) e contador de tempo de execução (ms).
+
+================================================================================
+TELA 3: PLAYGROUND LIVRE (SANDBOX)
+================================================================================
+• Topbar: Título com ícone de Terminal.
+• Seletor de Linguagens: Botões em pílula [JAVA] [PYTHON] [JAVASCRIPT].
+• Dropdown de Presets: Modelos de algoritmos pré-montados prontos para teste.
+• Divisão 50% / 50%:
+  - Lado Esquerdo: Editor de Código completo.
+  - Lado Direito: Terminal de saída.
+
+================================================================================
+TELA 4: CONQUISTAS & MISSÕES DIÁRIAS (GAMIFICAÇÃO)
+================================================================================
+• Grid de 3 Cards de Resumo:
+  1. Nível do Desenvolvedor: Nível atual, XP total e barra de progresso até o próximo nível.
+  2. Missões Diárias: Contador (ex: 2/3 concluídas).
+  3. Insígnias Desbloqueadas: Total de medalhas conquistadas (ex: 4/6).
+• Seção Missões de Hoje:
+  - Cards individuais de cada missão com recompensa de XP e barra de progresso verde/gradiente.
+• Seção Galeria de Insígnias:
+  - Filtros de categoria: [Todas] [Java] [Progresso].
+  - Grid de medalhas:
+    * Desbloqueadas: Fundo esmeralda (#86EFAC), ícone dourado e tag "Desbloqueada".
+    * Bloqueadas: Opacidade 50%, ícone de cadeado e borda cinza.
+
+================================================================================
+TELA 5: SOBRE & CATÁLOGO DE SNIPPETS
+================================================================================
+• Introdução com logotipo oficial DualDev.
+• Seção de Snippets Inteligentes estilo VS Code:
+  - Pílulas para trocar de linguagem.
+  - Grid de atalhos contendo:
+    * Prefixo destacado (ex: "sout", "main", "def").
+    * Descrição de uso.
+    * Bloco de código demonstrativo.
+    * Botão "Copiar".
+
+--------------------------------------------------------------------------------
+6. ADAPTAÇÃO PARA CELULAR (MOBILE WIREFRAME - 393 x 852 px)
+--------------------------------------------------------------------------------
+• Substituir a barra do topo por uma Bottom Navigation Bar fixa no rodapé:
+  [Início] [Academia] [Playground] [Conquistas] [Sobre]
+• Na tela da Academia:
+  - Em vez de colunas lado a lado, usar abas no topo:
+    [Teoria] | [Editor de Código] | [Terminal de Saída]
+• Botão no topo para instalação como PWA ("Instalar App no Celular").
+
+--------------------------------------------------------------------------------
+7. FLUXOS INTERATIVOS PARA PROTOTIPAGEM NO FIGMA (PROTOTYPE MODE)
+--------------------------------------------------------------------------------
+• Fluxo 1: Resolver Exercício
+  1. Na Home, clicar em "Acessar Academia".
+  2. Na Academia, clicar no botão "Verificar".
+  3. Transição: A aba inferior muda para "Testes", cards ficam verdes e o XP sobe.
+
+• Fluxo 2: Modo Foco / Tela Cheia
+  1. Clicar no botão "Recolher / Menu".
+  2. Transição com Smart Animate (Ease Out 200ms): A barra lateral de lições
+     recolhe e o editor se expande horizontalmente para ocupar a tela toda.
+
+• Fluxo 3: Desbloquear Dica
+  1. Clicar em "Precisa de ajuda?".
+  2. O acordeão se abre exibindo as dicas e o link "Ver código da solução sugerida".
+  3. Ao clicar, o editor é preenchido com a resposta correta.
+
+================================================================================
+FIM DO GUIA DE WIREFRAME PARA FIGMA
+================================================================================

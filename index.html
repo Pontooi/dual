@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DualDev Academy — Aprenda Programação na Prática</title>
+    <meta name="description" content="Plataforma interativa de aprendizado de programação. Escreva, execute e teste código Java, Python, JavaScript, HTML e CSS diretamente no navegador com feedback instantâneo. Sem instalações necessárias." />
+    <meta name="keywords" content="programação, aprender a programar, java, python, javascript, html, css, editor de código, execução online, academia de programação" />
+    <meta property="og:title" content="DualDev Academy — Aprenda Programação na Prática" />
+    <meta property="og:description" content="Plataforma interativa para aprender Java, Python, JavaScript, HTML e CSS com execução de código instantânea no navegador." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/icons/app-icon-512.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DualDev Academy" />
+    <meta name="twitter:description" content="Aprenda programação na prática com execução instantânea no navegador." />
+    <meta name="theme-color" content="#0b101b" />
+
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/app-icon-192.svg" />
+    <link rel="apple-touch-icon" href="./assets/icons/app-icon-512.svg" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      // Garante a barra final na URL do repositório no GitHub Pages para que assets relativos nunca dêem 404
+      if (window.location.pathname.split('/').pop().indexOf('.') === -1 && !window.location.pathname.endsWith('/')) {
+        window.location.replace(window.location.pathname + '/' + window.location.search + window.location.hash);
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-[#0b101b] text-slate-100 selection:bg-[#ffbe82]/30 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
